@@ -25,6 +25,18 @@ Feature: Karate Basic Todos
     * def status = response.complete
     * print "value of ID: " + id
 
+   #  Get a single todos
+  Given path id
+    When method Get
+    Then status 200
+    And match response == { id: '#(id)', title: 'First', complete: false }
+
+
+
+
+
+
+
 
 
 
