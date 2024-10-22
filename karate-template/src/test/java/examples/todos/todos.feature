@@ -70,6 +70,16 @@ Feature: Karate Basic Todos
     Then status 200
      And match response.title == 'SecondTask'
 
+       # Create a third single todo
+    Given request todo3
+    Then status 200
+    And header Content-Type =  "application/json"
+    When method Post
+    Then status 200
+     And match response.title == 'ThirdTask'
+
+
+
 
 
      # Get all todos
@@ -81,23 +91,30 @@ Feature: Karate Basic Todos
      * def SecondTask = response[1]
     * match SecondTask.complete == false
     * match SecondTask.title == 'SecondTask'
+    * def ThirdTask = response[2]
+    * match ThirdTask.complete == false
+    * match ThirdTask.title == 'ThirdTask'
 
 
 
     # Update a First todo
     Given path id
-    And request { title: 'FirstTask', complete: true}
+    And request { title: 'UpdatedFirstTask', complete: true}
     When method Put
     Then status 200
-    And match response == { id: '#(id)', title: 'FirstTask', complete: true }
+    And match response == { id: '#(id)', title: 'UpdatedFirstTask', complete: true }
 
 
-    # Update a Second todo 
-    Given path id
-    And request { title: 'SecondTask', complete: true}
-    When method Put
-    Then status 200
-    And match response == { id: '#(id)', title: 'SecondTask', complete: true }
+    
+    
+
+
+
+
+
+  
+
+
 
 
     
