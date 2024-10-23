@@ -1,6 +1,7 @@
-Feature: Data driven testing example
 @debug
-  Scenario: 
+Feature: Data driven testing example
+
+Background: 
     * url apiUrl
     * def sleep = function(pause) { java.lang.Thread.sleep(pause * 1000)}
 
