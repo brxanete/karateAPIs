@@ -102,11 +102,11 @@ Feature: Karate Basic Todos
     * match each response contains { complete: '#boolean' }
 
 
-    # Clear all todo
-    Given url 'http://localhost:8080/api/reset'
-    When method Get
-    Then status 200
-    And match response == { deleted: '#number' }
+    # Llamamos un feature especifico con una accion especifica.
+    * call read('classpath:helpers/resetTodos.feature')
+
+
+
 
 
 

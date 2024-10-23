@@ -1,4 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: examples.ExamplesTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.802 s - in examples.ExamplesTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.13 s <<< FAILURE! - in examples.ExamplesTest
+examples.ExamplesTest.testParallel  Time elapsed: 4.111 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+incomplete http request, 'url' not set
+classpath:examples/todos/dataDriven.feature:10
+incomplete http request, 'url' not set
+classpath:examples/todos/dataDriven.feature:10
+incomplete http request, 'url' not set
+classpath:examples/todos/dataDriven.feature:10 ==> expected: <0> but was: <3>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at examples.ExamplesTest.testParallel(ExamplesTest.java:17)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
