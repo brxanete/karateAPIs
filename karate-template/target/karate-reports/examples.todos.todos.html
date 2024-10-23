@@ -21,7 +21,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   capture_pageview:false,
   api_transport:'sendBeacon',
   loaded: function(posthog) { 
-    posthog.capture("report_feature",{distinct_id:"432a47c9-cd21-47db-b1c0-1cf9cf527736",karate_version:"1.5.0",karate_meta:null});
+    posthog.capture("report_feature",{distinct_id:"acd8ca8e-616d-419d-b4b2-b4f8acfaf9f8",karate_version:"1.5.0",karate_meta:null});
   }
 });
 </script>
@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2024-10-21 08:29:16 p. m.</div>
+    <div>2024-10-22 05:03:40 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:15]"><span>[1:15]</span> <span>Basic todos flow</span></a>
+            <a href="#[1:13]"><span>[1:13]</span> <span>Basic todos flow</span></a>
           </div>
         </div>
       </div>
@@ -69,29 +69,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:15]">
+          <div class="scenario-heading" id="[1:13]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:15]</span>
+                Scenario: <span>[1:13]</span>
                 <span class="scenario-name">Basic todos flow</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>809</span>
+              <span>ms:</span>&nbsp;<span>479</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:15]bg">
+            <div class="step-container" id="[1:13]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:15]bg"><div>
+          <div data-parent="[1:13]bg"><div>
   
 
   <div class="step-row">
@@ -104,11 +104,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># * url &#39;http://localhost:8080/api/todos&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Si hemos definido la variable desde el karate-config.js, podemos llamarla directamente</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/api/todos&#39;</span>
+        <span>*</span>&nbsp;<span>url apiUrl</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -120,8 +138,36 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.5">20:29:16.053 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.9">17:03:39.563 karate.env system property was: null 
 </div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def taskName = &#39;PrimeraTarea&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
 
   
 
@@ -153,10 +199,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">19</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>request { title: &#39;FirstTask&#39;, complete: false}</span>
+        <span>Given</span>&nbsp;<span>request { title: &#39;#(taskName)&#39;, complete: false}</span>
       </div>
     </div>
-    <div class="time-cell passed">52</div>
+    <div class="time-cell passed">30</div>
   </div>
 
    
@@ -191,7 +237,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method Post</span>
       </div>
     </div>
-    <div class="time-cell passed">522</div>
+    <div class="time-cell passed">321</div>
   </div>
 
    
@@ -200,23 +246,23 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.21">20:29:16.564 request:
+  <div class="preformatted" data-parent="0.21">17:03:39.897 request:
 1 &gt; POST http://localhost:8080/api/todos
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 38
+1 &gt; Content-Length: 41
 1 &gt; Host: localhost:8080
 1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;title&quot;:&quot;FirstTask&quot;,&quot;complete&quot;:false}
+{&quot;title&quot;:&quot;PrimeraTarea&quot;,&quot;complete&quot;:false}
 
-20:29:16.672 response time in milliseconds: 106
+17:03:39.939 response time in milliseconds: 41
 1 &lt; 200
 1 &lt; content-type: application/json
-1 &lt; content-length: 82
+1 &lt; content-length: 85
 1 &lt; server: Armeria/1.29.2
-1 &lt; date: Tue, 22 Oct 2024 01:29:16 GMT
-{&quot;title&quot;:&quot;FirstTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;0455e904-82ec-4349-ab4f-3acbb243b0ff&quot;}
+1 &lt; date: Tue, 22 Oct 2024 22:03:39 GMT
+{&quot;title&quot;:&quot;PrimeraTarea&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;b46d5fca-d2b2-48aa-890b-22669f2e1e30&quot;}
 
 </div>   
 
@@ -276,10 +322,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">25</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == { id: &#39;#string&#39;, title: &#39;FirstTask&#39;, complete: false }</span>
+        <span>And</span>&nbsp;<span>match response == { id: &#39;#string&#39;, title: &#39;#(taskName)&#39;, complete: false }</span>
       </div>
     </div>
-    <div class="time-cell passed">17</div>
+    <div class="time-cell passed">16</div>
   </div>
 
    
@@ -307,8 +353,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.29">
-      <div class="step-ref passed">29</div>
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def id = response.id</span>
@@ -342,8 +388,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.31">
-      <div class="step-ref passed">31</div>
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def title = response.title</span>
@@ -377,14 +423,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.33">
-      <div class="step-ref passed">33</div>
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def status = response.complete</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -412,14 +458,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.35">
-      <div class="step-ref passed">35</div>
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print &quot;value of ID: &quot; + id</span>
       </div>
     </div>
-    <div class="time-cell passed">8</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -428,7 +474,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.35">20:29:16.704 [print] value of ID: 0455e904-82ec-4349-ab4f-3acbb243b0ff 
+  <div class="preformatted" data-parent="0.36">17:03:39.973 [print] value of ID: b46d5fca-d2b2-48aa-890b-22669f2e1e30 
 </div>   
 
   
@@ -457,8 +503,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.39">
-      <div class="step-ref passed">39</div>
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path id</span>
@@ -492,14 +538,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.41">
-      <div class="step-ref passed">41</div>
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method Get</span>
       </div>
     </div>
-    <div class="time-cell passed">43</div>
+    <div class="time-cell passed">16</div>
   </div>
 
    
@@ -508,21 +554,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.41">20:29:16.707 request:
-2 &gt; GET http://localhost:8080/api/todos/0455e904-82ec-4349-ab4f-3acbb243b0ff
+  <div class="preformatted" data-parent="0.42">17:03:39.975 request:
+2 &gt; GET http://localhost:8080/api/todos/b46d5fca-d2b2-48aa-890b-22669f2e1e30
 2 &gt; Host: localhost:8080
 2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
 2 &gt; Accept-Encoding: gzip,deflate
 
 
-20:29:16.747 response time in milliseconds: 39
+17:03:39.990 response time in milliseconds: 14
 2 &lt; 200
 2 &lt; content-type: application/json
-2 &lt; content-length: 82
+2 &lt; content-length: 85
 2 &lt; server: Armeria/1.29.2
-2 &lt; date: Tue, 22 Oct 2024 01:29:16 GMT
-{&quot;title&quot;:&quot;FirstTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;0455e904-82ec-4349-ab4f-3acbb243b0ff&quot;}
+2 &lt; date: Tue, 22 Oct 2024 22:03:39 GMT
+{&quot;title&quot;:&quot;PrimeraTarea&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;b46d5fca-d2b2-48aa-890b-22669f2e1e30&quot;}
 
 </div>   
 
@@ -543,8 +589,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.43">
-      <div class="step-ref passed">43</div>
+    <div class="step-container" id="0.44">
+      <div class="step-ref passed">44</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -578,11 +624,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.45">
-      <div class="step-ref passed">45</div>
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == { id: &#39;#(id)&#39;, title: &#39;FirstTask&#39;, complete: false }</span>
+        <span>And</span>&nbsp;<span>match response == { id: &#39;#(id)&#39;, title: &#39;#(taskName)&#39;, complete: false }</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -606,21 +652,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.48">
-      <div class="step-ref passed">48</div>
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def todo2 =</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.48">{
-    &quot;title&quot;: &#39;SecondTask&#39;,
-    &quot;complete&quot;: false
+  <div class="preformatted" data-parent="0.49">{
+&quot;title&quot;: &#39;SecondTask&#39;,
+&quot;complete&quot;: false
 }</div>
 
   
@@ -637,21 +683,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.56">
-      <div class="step-ref passed">56</div>
+    <div class="step-container" id="0.57">
+      <div class="step-ref passed">57</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def todo3 =</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.56">{
-    &quot;title&quot;: &#39;ThirdTask&#39;,
-    &quot;complete&quot;: false
+  <div class="preformatted" data-parent="0.57">{
+&quot;title&quot;: &#39;ThirdTask&#39;,
+&quot;complete&quot;: false
 }</div>
 
   
@@ -675,14 +721,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.66">
-      <div class="step-ref passed">66</div>
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>request todo2</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -703,8 +749,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.67">
-      <div class="step-ref passed">67</div>
+    <div class="step-container" id="0.68">
+      <div class="step-ref passed">68</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -731,8 +777,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.68">
-      <div class="step-ref passed">68</div>
+    <div class="step-container" id="0.69">
+      <div class="step-ref passed">69</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>header Content-Type =  &quot;application/json&quot;</span>
@@ -759,14 +805,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.69">
-      <div class="step-ref passed">69</div>
+    <div class="step-container" id="0.70">
+      <div class="step-ref passed">70</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method Post</span>
       </div>
     </div>
-    <div class="time-cell passed">35</div>
+    <div class="time-cell passed">14</div>
   </div>
 
    
@@ -775,23 +821,23 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.69">20:29:16.754 request:
+  <div class="preformatted" data-parent="0.70">17:03:39.999 request:
 3 &gt; POST http://localhost:8080/api/todos
 3 &gt; Content-Type: application/json; charset=UTF-8
 3 &gt; Content-Length: 39
 3 &gt; Host: localhost:8080
 3 &gt; Connection: Keep-Alive
-3 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+3 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
 3 &gt; Accept-Encoding: gzip,deflate
 {&quot;title&quot;:&quot;SecondTask&quot;,&quot;complete&quot;:false}
 
-20:29:16.787 response time in milliseconds: 31
+17:03:40.010 response time in milliseconds: 9
 3 &lt; 200
 3 &lt; content-type: application/json
 3 &lt; content-length: 83
 3 &lt; server: Armeria/1.29.2
-3 &lt; date: Tue, 22 Oct 2024 01:29:16 GMT
-{&quot;title&quot;:&quot;SecondTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;2c000b3e-6d5e-4273-8760-926dfd53e3e1&quot;}
+3 &lt; date: Tue, 22 Oct 2024 22:03:40 GMT
+{&quot;title&quot;:&quot;SecondTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;80d0b1d1-b7b9-460c-b765-6a84789b4386&quot;}
 
 </div>   
 
@@ -805,8 +851,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.70">
-      <div class="step-ref passed">70</div>
+    <div class="step-container" id="0.71">
+      <div class="step-ref passed">71</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -833,14 +879,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.71">
-      <div class="step-ref passed">71</div>
+    <div class="step-container" id="0.72">
+      <div class="step-ref passed">72</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.title == &#39;SecondTask&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -868,39 +914,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.74">
-      <div class="step-ref passed">74</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>request todo3</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
     <div class="step-container" id="0.75">
       <div class="step-ref passed">75</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>Given</span>&nbsp;<span>request todo3</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -928,7 +946,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">76</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Content-Type =  &quot;application/json&quot;</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -956,10 +974,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">77</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method Post</span>
+        <span>And</span>&nbsp;<span>header Content-Type =  &quot;application/json&quot;</span>
       </div>
     </div>
-    <div class="time-cell passed">32</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -968,25 +986,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.77">20:29:16.796 request:
-4 &gt; POST http://localhost:8080/api/todos
-4 &gt; Content-Type: application/json; charset=UTF-8
-4 &gt; Content-Length: 38
-4 &gt; Host: localhost:8080
-4 &gt; Connection: Keep-Alive
-4 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-4 &gt; Accept-Encoding: gzip,deflate
-{&quot;title&quot;:&quot;ThirdTask&quot;,&quot;complete&quot;:false}
-
-20:29:16.826 response time in milliseconds: 30
-4 &lt; 200
-4 &lt; content-type: application/json
-4 &lt; content-length: 82
-4 &lt; server: Armeria/1.29.2
-4 &lt; date: Tue, 22 Oct 2024 01:29:16 GMT
-{&quot;title&quot;:&quot;ThirdTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;44ba61fb-abda-41b3-af41-644bb7266891&quot;}
-
-</div>   
+     
 
   
 
@@ -1000,6 +1000,52 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div class="step-row">
     <div class="step-container" id="0.78">
       <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method Post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.78">17:03:40.019 request:
+4 &gt; POST http://localhost:8080/api/todos
+4 &gt; Content-Type: application/json; charset=UTF-8
+4 &gt; Content-Length: 38
+4 &gt; Host: localhost:8080
+4 &gt; Connection: Keep-Alive
+4 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+4 &gt; Accept-Encoding: gzip,deflate
+{&quot;title&quot;:&quot;ThirdTask&quot;,&quot;complete&quot;:false}
+
+17:03:40.032 response time in milliseconds: 13
+4 &lt; 200
+4 &lt; content-type: application/json
+4 &lt; content-length: 82
+4 &lt; server: Armeria/1.29.2
+4 &lt; date: Tue, 22 Oct 2024 22:03:40 GMT
+{&quot;title&quot;:&quot;ThirdTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;871815f2-4873-4e72-a1cc-6e6bb23b7cc8&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.79">
+      <div class="step-ref passed">79</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1026,14 +1072,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.79">
-      <div class="step-ref passed">79</div>
+    <div class="step-container" id="0.80">
+      <div class="step-ref passed">80</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.title == &#39;ThirdTask&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1061,14 +1107,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.86">
-      <div class="step-ref passed">86</div>
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method Get</span>
       </div>
     </div>
-    <div class="time-cell passed">31</div>
+    <div class="time-cell passed">11</div>
   </div>
 
    
@@ -1077,21 +1123,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.86">20:29:16.830 request:
+  <div class="preformatted" data-parent="0.87">17:03:40.036 request:
 5 &gt; GET http://localhost:8080/api/todos
 5 &gt; Host: localhost:8080
 5 &gt; Connection: Keep-Alive
-5 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+5 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
 5 &gt; Accept-Encoding: gzip,deflate
 
 
-20:29:16.858 response time in milliseconds: 28
+17:03:40.045 response time in milliseconds: 8
 5 &lt; 200
 5 &lt; content-type: application/json
-5 &lt; content-length: 251
+5 &lt; content-length: 254
 5 &lt; server: Armeria/1.29.2
-5 &lt; date: Tue, 22 Oct 2024 01:29:16 GMT
-[{&quot;title&quot;:&quot;FirstTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;0455e904-82ec-4349-ab4f-3acbb243b0ff&quot;},{&quot;title&quot;:&quot;SecondTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;2c000b3e-6d5e-4273-8760-926dfd53e3e1&quot;},{&quot;title&quot;:&quot;ThirdTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;44ba61fb-abda-41b3-af41-644bb7266891&quot;}]
+5 &lt; date: Tue, 22 Oct 2024 22:03:40 GMT
+[{&quot;title&quot;:&quot;PrimeraTarea&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;b46d5fca-d2b2-48aa-890b-22669f2e1e30&quot;},{&quot;title&quot;:&quot;SecondTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;80d0b1d1-b7b9-460c-b765-6a84789b4386&quot;},{&quot;title&quot;:&quot;ThirdTask&quot;,&quot;complete&quot;:false,&quot;id&quot;:&quot;871815f2-4873-4e72-a1cc-6e6bb23b7cc8&quot;}]
 
 </div>   
 
@@ -1105,8 +1151,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.87">
-      <div class="step-ref passed">87</div>
+    <div class="step-container" id="0.88">
+      <div class="step-ref passed">88</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1133,42 +1179,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.88">
-      <div class="step-ref passed">88</div>
+    <div class="step-container" id="0.89">
+      <div class="step-ref passed">89</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def  FirstTask = response[0]</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.89">
-      <div class="step-ref passed">89</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match FirstTask.title == &#39;FirstTask&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -1193,10 +1211,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">90</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match FirstTask.complete == false</span>
+        <span>*</span>&nbsp;<span>match FirstTask.title == taskName</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1221,7 +1239,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">91</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def SecondTask = response[1]</span>
+        <span>*</span>&nbsp;<span>match FirstTask.complete == false</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1249,7 +1267,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">92</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match SecondTask.complete == false</span>
+        <span>*</span>&nbsp;<span>def SecondTask = response[1]</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1277,10 +1295,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">93</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match SecondTask.title == &#39;SecondTask&#39;</span>
+        <span>*</span>&nbsp;<span>match SecondTask.complete == false</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1305,10 +1323,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">94</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def SecondTask = response[2]</span>
+        <span>*</span>&nbsp;<span>match SecondTask.title == &#39;SecondTask&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1333,7 +1351,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">95</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match SecondTask.complete == false</span>
+        <span>*</span>&nbsp;<span>def ThirdTask = response[2]</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1361,10 +1379,38 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">96</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match SecondTask.title == &#39;ThirdTask&#39;</span>
+        <span>*</span>&nbsp;<span>match ThirdTask.complete == false</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.97">
+      <div class="step-ref passed">97</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match ThirdTask.title == &#39;ThirdTask&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1386,48 +1432,55 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Update a First todo</div>
+      <div class="step-cell comment"># Check all response objects</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.101">
-      <div class="step-ref passed">101</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
 
   <div class="step-row">
     <div class="step-container" id="0.102">
       <div class="step-ref passed">102</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request { title: &#39;UpdatedFirstTask&#39;, complete: true}</span>
+        <span>*</span>&nbsp;<span>match each response contains { complete: &#39;#boolean&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Clear all todo</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.106">
+      <div class="step-ref passed">106</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/api/reset&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1448,14 +1501,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.103">
-      <div class="step-ref passed">103</div>
+    <div class="step-container" id="0.107">
+      <div class="step-ref passed">107</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method Put</span>
+        <span>When</span>&nbsp;<span>method Get</span>
       </div>
     </div>
-    <div class="time-cell passed">36</div>
+    <div class="time-cell passed">11</div>
   </div>
 
    
@@ -1464,23 +1517,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.103">20:29:16.876 request:
-6 &gt; PUT http://localhost:8080/api/todos/0455e904-82ec-4349-ab4f-3acbb243b0ff
-6 &gt; Content-Type: application/json; charset=UTF-8
-6 &gt; Content-Length: 44
+  <div class="preformatted" data-parent="0.107">17:03:40.061 request:
+6 &gt; GET http://localhost:8080/api/reset
 6 &gt; Host: localhost:8080
 6 &gt; Connection: Keep-Alive
-6 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+6 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
 6 &gt; Accept-Encoding: gzip,deflate
-{&quot;title&quot;:&quot;UpdatedFirstTask&quot;,&quot;complete&quot;:true}
 
-20:29:16.909 response time in milliseconds: 32
+
+17:03:40.069 response time in milliseconds: 8
 6 &lt; 200
 6 &lt; content-type: application/json
-6 &lt; content-length: 88
+6 &lt; content-length: 13
 6 &lt; server: Armeria/1.29.2
-6 &lt; date: Tue, 22 Oct 2024 01:29:16 GMT
-{&quot;title&quot;:&quot;UpdatedFirstTask&quot;,&quot;complete&quot;:true,&quot;id&quot;:&quot;0455e904-82ec-4349-ab4f-3acbb243b0ff&quot;}
+6 &lt; date: Tue, 22 Oct 2024 22:03:40 GMT
+{&quot;deleted&quot;:3}
 
 </div>   
 
@@ -1494,8 +1545,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.104">
-      <div class="step-ref passed">104</div>
+    <div class="step-container" id="0.108">
+      <div class="step-ref passed">108</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1522,11 +1573,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.105">
-      <div class="step-ref passed">105</div>
+    <div class="step-container" id="0.109">
+      <div class="step-ref passed">109</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == { id: &#39;#(id)&#39;, title: &#39;UpdatedFirstTask&#39;, complete: true }</span>
+        <span>And</span>&nbsp;<span>match response == { deleted: &#39;#number&#39; }</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>

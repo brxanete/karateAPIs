@@ -1,28 +1,29 @@
+
 Feature: Karate Basic Todos
 
   Background:
     # Define la URL base para las pruebas de todos
-    * url 'http://localhost:8080/api/todos'
+    # * url 'http://localhost:8080/api/todos'
 
-    # Scenario: Get all todos
-    # Establece la URL para obtener todos los todos
-    # Given url 'http://localhost:8080/api/todos'
-    # Realiza una petición GET
-    # When method Get
-    # Verifica que el estado de la respuesta sea 200 (OK)
-    # Then status 200
+    # Si hemos definido la variable desde el karate-config.js, podemos llamarla directamente 
+    * url apiUrl
+
+ 
 
   Scenario: Basic todos flow
 
+    * def taskName = 'PrimeraTarea'
+
     # Create a single todo
     # Define la solicitud para crear un nuevo todo
-    Given request { title: 'FirstTask', complete: false}
+    Given request { title: '#(taskName)', complete: false}
     # Realiza una petición POST para crear el nuevo todo
     When method Post
     # Verifica que la respuesta tenga un estado 200 (OK)
     Then status 200
     # Verifica que la respuesta coincida con el formato esperado
-    And match response == { id: '#string', title: 'FirstTask', complete: false }
+    And match response == { id: '#string', title: '#(taskName)', complete: false }
+
 
 
     # Extrae el ID del nuevo todo de la respuesta
@@ -42,24 +43,24 @@ Feature: Karate Basic Todos
     # Verifica que la respuesta tenga un estado 200 (OK)
     Then status 200
     # Verifica que la respuesta coincida con el formato esperado del todo
-    And match response == { id: '#(id)', title: 'FirstTask', complete: false }
+    And match response == { id: '#(id)', title: '#(taskName)', complete: false }
 
-   
-    * def todo2 = 
-    """
-    {
-        "title": 'SecondTask',
-        "complete": false
-    }
-    """
 
-    * def todo3 = 
-    """
-    {
-        "title": 'ThirdTask',
-        "complete": false
-    }
-    """
+    * def todo2 =
+      """
+      {
+      "title": 'SecondTask',
+      "complete": false
+      }
+      """
+
+    * def todo3 =
+      """
+      {
+      "title": 'ThirdTask',
+      "complete": false
+      }
+      """
 
 
     # Create a second single todo
@@ -68,27 +69,27 @@ Feature: Karate Basic Todos
     And header Content-Type =  "application/json"
     When method Post
     Then status 200
-     And match response.title == 'SecondTask'
+    And match response.title == 'SecondTask'
 
-       # Create a third single todo
+    # Create a third single todo
     Given request todo3
     Then status 200
     And header Content-Type =  "application/json"
     When method Post
     Then status 200
-     And match response.title == 'ThirdTask'
+    And match response.title == 'ThirdTask'
 
 
 
 
 
-     # Get all todos
-     When method Get
-     Then status 200 
-     * def  FirstTask = response[0]
-     * match FirstTask.title == 'FirstTask'
-     * match FirstTask.complete == false
-     * def SecondTask = response[1]
+    # Get all todos
+    When method Get
+    Then status 200
+    * def  FirstTask = response[0]
+    * match FirstTask.title == taskName
+    * match FirstTask.complete == false
+    * def SecondTask = response[1]
     * match SecondTask.complete == false
     * match SecondTask.title == 'SecondTask'
     * def ThirdTask = response[2]
@@ -97,50 +98,56 @@ Feature: Karate Basic Todos
 
 
 
-    # Update a First todo
-    Given path id
-    And request { title: 'UpdatedFirstTask', complete: true}
-    When method Put
+    # Check all response objects
+    * match each response contains { complete: '#boolean' }
+
+
+    # Clear all todo
+    Given url 'http://localhost:8080/api/reset'
+    When method Get
     Then status 200
-    And match response == { id: '#(id)', title: 'UpdatedFirstTask', complete: true }
-
-
-    
-    
+    And match response == { deleted: '#number' }
 
 
 
 
 
-  
 
 
 
 
-    
-
-
-    
-
-
-    
 
 
 
 
-    
 
 
 
-    
-
-
-    
 
 
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

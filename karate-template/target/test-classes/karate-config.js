@@ -6,7 +6,9 @@ function fn() {
   }
   var config = {
     env: env,
-    myVarName: 'someValue'
+
+    //Podemos definir la variable general desde la configuración
+    apiUrl: 'http://localhost:8080/api/todos'
   }
   if (env == 'dev') {
     // customize
