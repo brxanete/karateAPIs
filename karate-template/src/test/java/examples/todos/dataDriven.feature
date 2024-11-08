@@ -1,4 +1,4 @@
-@debug
+
 Feature: Data driven testing example
 
 Background: 
@@ -19,4 +19,11 @@ Background:
         | One   |     1     |
         | Two   |     2     |
         | Three |     3     |
+
+
+        
+
+
+
+        
 
